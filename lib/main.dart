@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test/dialog.dart';
+import 'package:test/dialog_cache.dart';
+import 'package:test/dialog_flag.dart';
 
 void main() {
   runApp(const MainApp());
@@ -32,10 +33,17 @@ class HomeScreen extends StatelessWidget {
             const Text('Hello World!'),
             ElevatedButton(
               onPressed: () {
-                CustomDialog.show(context);
-                CustomDialog.show(context);
+                FlagDialog.show(context);
+                FlagDialog.show(context);
               },
-              child: const Text('Show Dialog'),
+              child: const Text('Flag Dialog'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                CacheDialog.show(context);
+                CacheDialog.show(context);
+              },
+              child: const Text('Async Dialog'),
             ),
           ],
         ),

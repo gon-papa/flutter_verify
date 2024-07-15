@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomDialog extends StatelessWidget {
-  const CustomDialog({super.key});
+class FlagDialog extends StatelessWidget {
+  const FlagDialog({super.key});
 
   static bool _isShow = false;
 
@@ -15,7 +15,7 @@ class CustomDialog extends StatelessWidget {
       showDialog<void>(
         context: context,
         builder: (BuildContext context) {
-          return const CustomDialog();
+          return const FlagDialog();
         },
       ).then((value) {
         _updateShow();
@@ -26,7 +26,7 @@ class CustomDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Dialog Title'),
+      title: const Text('Flag Dialog'),
       content: const Text('This is the content of the dialog'),
       actions: <Widget>[
         TextButton(
